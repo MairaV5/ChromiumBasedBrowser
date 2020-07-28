@@ -28,6 +28,53 @@ namespace ChromiumBasedBrowser
             browser = new ChromiumWebBrowser("https://datorium.eu");
             browser.Dock = DockStyle.Fill;
             this.Controls.Add(browser);
+            browser.AddressChanged += Browser_AddressChanged;
+        }
+
+        private void toolStripButtonGo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                browser.Load(toolStripAddressBar.Text);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void toolStripButtonBack_CheckStateChanged(object sender, EventArgs e)
+        {
+            //accident
+        }
+
+        private void toolStripButtonBack_Click(object sender, EventArgs e)
+        {
+            browser.Back();
+        }
+
+        private void toolStripButtonForward_Click(object sender, EventArgs e)
+        {
+            browser.Forward();
+        }
+
+        private void Browser_AddressChanged(object sender, AddressChangedEventArgs e)
+        {
+            var selectedBrowser = (ChromiumWebBrowser)sender;
+            this.Invoke(new MethodInvoker(() =>
+            {
+                toolStripAddressBar.Text = e.Address;
+            }));
+        }
+
+        private void Browser_Load(object sender, EventArgs e)
+        {
+            //don't know where this came from
+        }
+
+        private void toolStripButtonReload_Click(object sender, EventArgs e)
+        {
+            browser.Reload();
         }
     }
 }
