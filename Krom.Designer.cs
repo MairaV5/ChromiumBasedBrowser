@@ -38,6 +38,7 @@
             this.BrowserTabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.toolStripButtonAddTab = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.BrowserTabs.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,8 @@
             this.toolStripAddressBar,
             this.toolStripButtonBack,
             this.toolStripButtonForward,
-            this.toolStripButtonReload});
+            this.toolStripButtonReload,
+            this.toolStripButtonAddTab});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 34);
@@ -109,11 +111,11 @@
             // 
             this.BrowserTabs.Controls.Add(this.tabPage1);
             this.BrowserTabs.Controls.Add(this.tabPage2);
-            this.BrowserTabs.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BrowserTabs.Location = new System.Drawing.Point(0, 111);
+            this.BrowserTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BrowserTabs.Location = new System.Drawing.Point(0, 34);
             this.BrowserTabs.Name = "BrowserTabs";
             this.BrowserTabs.SelectedIndex = 0;
-            this.BrowserTabs.Size = new System.Drawing.Size(800, 339);
+            this.BrowserTabs.Size = new System.Drawing.Size(800, 416);
             this.BrowserTabs.TabIndex = 1;
             // 
             // tabPage1
@@ -121,7 +123,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(792, 306);
+            this.tabPage1.Size = new System.Drawing.Size(792, 383);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -135,6 +137,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // toolStripButtonAddTab
+            // 
+            this.toolStripButtonAddTab.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonAddTab.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonAddTab.Image")));
+            this.toolStripButtonAddTab.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonAddTab.Name = "toolStripButtonAddTab";
+            this.toolStripButtonAddTab.Size = new System.Drawing.Size(34, 29);
+            this.toolStripButtonAddTab.Text = "+";
+            this.toolStripButtonAddTab.Click += new System.EventHandler(this.toolStripButtonAddTab_Click);
             // 
             // Browser
             // 
@@ -165,6 +177,7 @@
         private System.Windows.Forms.TabControl BrowserTabs;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ToolStripButton toolStripButtonAddTab;
     }
 }
 
