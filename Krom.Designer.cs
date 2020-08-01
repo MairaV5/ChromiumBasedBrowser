@@ -37,7 +37,7 @@
             this.toolStripButtonReload = new System.Windows.Forms.ToolStripButton();
             this.BrowserTabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageAdd = new System.Windows.Forms.TabPage();
             this.toolStripButtonAddTab = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.BrowserTabs.SuspendLayout();
@@ -110,7 +110,7 @@
             // BrowserTabs
             // 
             this.BrowserTabs.Controls.Add(this.tabPage1);
-            this.BrowserTabs.Controls.Add(this.tabPage2);
+            this.BrowserTabs.Controls.Add(this.tabPageAdd);
             this.BrowserTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BrowserTabs.Location = new System.Drawing.Point(0, 34);
             this.BrowserTabs.Name = "BrowserTabs";
@@ -128,15 +128,15 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // tabPageAdd
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 67);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageAdd.Location = new System.Drawing.Point(4, 29);
+            this.tabPageAdd.Name = "tabPageAdd";
+            this.tabPageAdd.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAdd.Size = new System.Drawing.Size(792, 383);
+            this.tabPageAdd.TabIndex = 1;
+            this.tabPageAdd.Text = "+";
+            this.tabPageAdd.UseVisualStyleBackColor = true;
             // 
             // toolStripButtonAddTab
             // 
@@ -176,7 +176,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonReload;
         private System.Windows.Forms.TabControl BrowserTabs;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPageAdd;
         private System.Windows.Forms.ToolStripButton toolStripButtonAddTab;
     }
 }
