@@ -20,6 +20,12 @@ namespace ChromiumBasedBrowser
         {
             InitializeComponent();
             InitializeBrowser();
+            InitializeForm();
+        }
+
+        private void InitializeForm()
+        {
+            BrowserTabs.Height = ClientRectangle.Height - 40;
         }
 
         private void InitializeBrowser()
@@ -27,7 +33,7 @@ namespace ChromiumBasedBrowser
             Cef.Initialize(new CefSettings());
             browser = new ChromiumWebBrowser("https://datorium.eu");
             browser.Dock = DockStyle.Fill;
-            this.Controls.Add(browser);
+            BrowserTabs.TabPages[0].Controls.Add(browser);
             browser.AddressChanged += Browser_AddressChanged;
         }
 
@@ -75,6 +81,26 @@ namespace ChromiumBasedBrowser
         private void toolStripButtonReload_Click(object sender, EventArgs e)
         {
             browser.Reload();
+        }
+
+        private void toolStripAddressBar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                Navigate(toolStripAddressBar.Text);
+            }
+        }
+
+        private void Navigate(string address)
+        {
+            try
+            {
+                browser.Load(address);
+            }
+            catch
+            {
+
+            }
         }
     }
 }
